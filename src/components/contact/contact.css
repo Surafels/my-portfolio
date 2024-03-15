@@ -1,0 +1,108 @@
+#contact-detail {
+    
+    translate: none;
+    rotate: none;
+    scale: none;
+    transform: translate(0px, 0px);
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 51px;
+    color: #172b4d;
+    text-align: center;
+    margin-block: 36px;
+    position: relative;
+    margin-inline: auto;
+
+}
+
+
+Form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 36px 0 0;
+}
+
+input {
+    height: 48px;
+    padding-left: 15px;
+    border: 1px solid rgb(96, 192, 149);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 15px;
+
+}
+
+textarea {
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #60c095;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #091e42;
+    height: 114px;
+}
+
+#email {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #42526e;
+    text-decoration: none;
+
+}
+.pr-custom {
+    padding-right: 19px;
+  }
+
+
+  @media (min-width: 768px) {
+    
+    #contact-detail {
+        font-size: 30px;
+        text-align: left;
+        margin: 140px 24px 0;
+    }
+      #animate {
+        
+        width: 40%; 
+
+      }
+     Form {
+        width:60%;
+        margin: 120px 24px 0;
+        gap: 24px;
+     } 
+     #btn {
+        align-self: flex-start;
+      }
+      #email {
+        display: none;
+      }
+      .m-3 {
+        padding-bottom: 160px;
+      }
+
+      .slide-in {
+        opacity: 0;
+        transform: translateX(-100%);
+        animation: slideIn 0.5s ease forwards;
+      }
+      
+      @keyframes slideIn {
+        0% {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+  }
+
+  
