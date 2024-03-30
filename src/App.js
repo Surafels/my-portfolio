@@ -13,7 +13,7 @@ function App() {
     try {
       const response = await fetch(`https://api.github.com/repos/${repo.owner.login}/${repo.name}`, {
         headers: {
-          Authorization: 'Bearer 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',
+          Authorization: 'Bearer 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',
         },
       });
 
@@ -23,8 +23,8 @@ function App() {
 
       const data = await response.json();
       const description = data.description !== null ? data.description.toLowerCase() : '';
-      const languages = ['javascript', 'ruby', 'typescript', 'html', 'css'];
-      const frameworks = ['react', 'redux', 'angular', 'vue', 'ruby on rails', 'express'];
+      const languages = ['javascript', 'ruby', 'typescript', 'html', 'css', 'PostgresSQL'];
+      const frameworks = ['react', 'redux', 'angular', 'vue', 'ruby on rails', 'devise', 'express'];
 
       const foundLanguages = languages.filter((lang) => description.includes(lang));
       const foundFrameworks = frameworks.filter((framework) => (
@@ -43,32 +43,34 @@ function App() {
       return {
         languages: ['No languages mentioned'],
         frameworks: ['No frameworks mentioned'],
+
       };
     }
   };
+
   const extractImageFromReadme = (readmeContent) => {
-    // Regular expression pattern to match Markdown image syntax
-    const imageRegex = /!\[.*?\]\((.*?)\)/g;
-    // const imagePath = `/assets/car_image_${repo.id}.jpg`; // Use the relative path to the image file
-
-    // Find all matches of the image pattern in the README content
-    const matches = [...readmeContent.matchAll(imageRegex)];
-
-    // If there are matches, return the URL of the first image found
-    if (matches.length > 0) {
-      // Extract the image URL from the first match
-      const imageUrl = matches[0][1];
-      return imageUrl;
+    const imageRegex = /<img[^>]+src="([^">]+)"/g;
+    const match = imageRegex.exec(readmeContent);
+    if (match && match[1]) {
+      return match[1];
     }
-
-    // If no image URL found, return null
-    return null;
+    return '';
   };
 
+  // const extractLiveDemoLink = (readmeContent) => {
+  //   const liveDemoRegex = /Live Demo: \[([^\]]+)\]\(([^\)]+)\)/g;
+  //   const liveDemoMatch = liveDemoRegex.exec(readmeContent);
+  //   const liveDemoLink = liveDemoMatch ? liveDemoMatch[2] : '';
+  //   return liveDemoLink;
+  // };
   useEffect(() => {
     const fetchCardData = async () => {
       try {
-        const response = await fetch('https://api.github.com/users/Surafels/repos');
+        const response = await fetch('https://api.github.com/users/Surafels/repos', {
+          headers: {
+            Authorization: 'Bearer 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',
+          },
+        });
 
         if (!response.ok) {
           throw new Error('Failed to fetch repository data');
@@ -88,22 +90,24 @@ function App() {
                     ...repo,
                     languages: ['No languages mentioned'],
                     frameworks: ['No frameworks mentioned'],
+                    image: '',
+                    // liveDemoLink: '',
                   };
                 }
                 throw new Error(`Failed to fetch README for repository: ${repo.name}`);
               }
 
               const readmeData = await readmeResponse.json();
-
               const { languages, frameworks } = await fetchLanguagesAndFrameworksFromDescription(repo);
-
-              const image = extractImageFromReadme(readmeData.content);
-
+              const image = extractImageFromReadme(atob(readmeData.content));
+              // const liveDemoLink = extractLiveDemoLink(atob)(readmeData.content);
               return {
                 ...repo,
                 languages,
                 frameworks,
                 image,
+                // liveDemoLink,
+
               };
             } catch (error) {
               console.error(`Error fetching README for repository: ${repo.name}`, error);
@@ -111,6 +115,7 @@ function App() {
                 ...repo,
                 languages: ['Error fetching languages'],
                 frameworks: ['Error fetching frameworks'],
+                image: '',
               };
             }
           }),
@@ -129,31 +134,37 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Home />
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-        {cardsData.length > 0
-  && cardsData.map((card) => {
-    console.log('Image URL:', card.image);
-    const image = card.image || 'assets/images/bg.png';
-    return (
-      <Cards
-        key={card.id}
-        title={card.name}
-        languages={card.languages.map((lang) => capitalize(lang))}
-        frameworks={card.frameworks.map((framework) => capitalize(framework))}
-        description={card.description || 'No description available'}
-        // image={card.image || 'No image available'}
-        image={image}
-        style={{ width: '300px', height: '300px' }}
-        link={card.html_url}
-      />
-    );
-  })}
+    <div>
+      <div className="container-fluid p-0 ">
+        <section id="home">
 
+          <Home />
+        </section>
+        <section className="p-2" id="portfolio">
+          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            {cardsData.map((card) => (
+              <Cards
+                key={card.id}
+                title={card.name}
+                languages={card.languages.map((lang) => capitalize(lang))}
+                frameworks={card.frameworks.map((framework) => capitalize(framework))}
+                description={card.description || 'No description available'}
+                image={card.image}
+
+                style={{ width: '300px', height: '300px' }}
+                link={card.html_url}
+                // liveDemoLink= {card.liveDemoLink}
+              />
+            ))}
+          </div>
+        </section>
+        <section className="p-2" id="about">
+          <About />
+        </section>
+        <section className="p-2" id="contact">
+          <Contact />
+        </section>
       </div>
-      <About />
-      <Contact />
     </div>
   );
 }
