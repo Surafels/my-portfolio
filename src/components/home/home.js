@@ -12,7 +12,7 @@ const Home = () => (
         <div className="text-center">
 
           <h1 id="title">
-            Hey there, I'm Surafel.
+            Hey there, I&apos;m Surafel.
             <br />
             <span className="color-green">A Full-stack web developer</span>
           </h1>

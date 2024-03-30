@@ -19,7 +19,7 @@ const About = () => (
         {' '}
         I can help you build a product , feature or website Look through some
         of my work and experience! If you like what you see and have a project
-        you need coded, don't hesitate to contact me.
+        you need coded, don&apos;t hesitate to contact me.
       </p>
       <a href="https://drive.google.com/file/d/1NnQIQclYuVIjJXdFqp86p337lftEFqEQ/view?usp=sharing" id="btn" target="_blank" rel="noreferrer">Get my resume</a>
 

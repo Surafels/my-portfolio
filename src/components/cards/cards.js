@@ -7,12 +7,6 @@ import { GithubIcon, SeeliveIcon } from '../contact/icons';
 const Cards = ({
   image, title, languages, frameworks, link, description,
 }) => {
-  useEffect(() => {
-    console.log('Image URL:', image);
-    console.log('languages:', languages);
-    // console.log('live:', liveDemoLink);
-  }, [languages, image]);
-
   const [showPopup, setShowPopup] = useState(false);
 
   const openPopup = () => {
@@ -37,63 +31,38 @@ const Cards = ({
   return (
 
     <div className="container">
-       {!showPopup && (
-        <div className=" text-center m-auto mt-3">
-          <div className="col mb-4 mx-auto">
-            <div className="" id="card-info">
+      {!showPopup && (
+      <div className=" text-center m-auto mt-3">
+        <div className="col mb-4 mx-auto">
+          <div className="" id="card-info">
 
-              <div className="card pb-3">
-                {image && (
-                <img src={image} className="card-img-top" alt={title} />
-                )}
-                <div>
+            <div className="card pb-3">
+              {image && (
+              <img src={image} className="card-img-top" alt={title} />
+              )}
+              <div>
                 <h5 className="card-title">{title}</h5>
                 <ul id="stacks" className="list-unstyled mb-3">
-                  {languages && languages.map((language, index) => (
-                    <li key={index} id="list-stack">{language}</li>
+                  {languages && languages.map((language) => (
+                    <li key={language} id="list-stack">{language}</li>
                   ))}
                   {frameworks && frameworks.map((framework) => (
                     <li key={framework} id="list-stack">{framework}</li>
                   ))}
                 </ul>
                 <button onClick={openPopup} type="button" id="btn">See Project</button>
-                </div>
               </div>
             </div>
           </div>
         </div>
-      )} 
-{/* 
-{!showPopup && (
-  <div className="text-center m-auto mt-3">
-    <div className="col mb-4 mx-auto">
-      <div className="" id="card-info">
-        <div className="card h-100">
-          {image && (
-            <img src={image} className="card-img-top" alt={title} style={{ objectFit: 'cover', height: '200px' }} />
-          )}
-          <div className="card-body d-flex flex-column justify-content-between">
-            <h5 className="card-title">{title}</h5>
-            <ul id="stacks" className="list-unstyled mb-3">
-              {languages && languages.map((language, index) => (
-                <li key={index} id="list-stack">{language}</li>
-              ))}
-              {frameworks && frameworks.map((framework) => (
-                <li key={framework} id="list-stack">{framework}</li>
-              ))}
-            </ul>
-            <button onClick={openPopup} type="button" id="btn">See Project</button>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
-)} */}
+      )}
+
       {showPopup && (
-        <div className="scrolling-line-container" id="popup-container" onClick={closePopup}>
-          <div id="popup-window" onClick={(event) => event.stopPropagation()}>
+        <div className="scrolling-line-container" id="popup-container">
+          <div id="popup-window">
             <div id="close-image">
-              <button type="button" className="btn-close" onClick={closePopup} />
+              <button type="button" className="btn-close" aria-label="Close" onClick={closePopup} />
               {image && (
               <img src={image} className="card-img-top" alt={title} />
               )}

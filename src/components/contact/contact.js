@@ -68,7 +68,7 @@ const Contact = () => {
     <div id="footer">
       <div id="contact-form" className=" d-flex flex-column flex-sm-row background-svg">
         <div id="animate">
-          <p className="slide-in" id="contact-detail">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</p>
+          <p className="slide-in" id="contact-detail">I&apos;m always interested in hearing about new projects, so if you&apos;d like to chat please get in touch.</p>
         </div>
         <form onSubmit={handleFormSubmit}>
           <input

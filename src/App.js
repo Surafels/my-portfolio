@@ -98,7 +98,9 @@ function App() {
               }
 
               const readmeData = await readmeResponse.json();
-              const { languages, frameworks } = await fetchLanguagesAndFrameworksFromDescription(repo);
+              const { languages, frameworks } = await fetchLanguagesAndFrameworksFromDescription(
+                repo,
+              );
               const image = extractImageFromReadme(atob(readmeData.content));
               // const liveDemoLink = extractLiveDemoLink(atob)(readmeData.content);
               return {

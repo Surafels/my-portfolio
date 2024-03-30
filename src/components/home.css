@@ -31,6 +31,8 @@
     cursor: pointer;
     color: #93A79D;
     font-size: 32px;
+    border: none;
+    background: none;
   }
   
   #home-page {

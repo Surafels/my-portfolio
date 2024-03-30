@@ -40,20 +40,32 @@ const Navbar = () => {
           </li>
         </ul>
       ) : (
-        <span
+        <button
+          type="submit"
           className="navbar-toggler mr-2"
           onClick={toggleMenu}
+          aria-label="Toggle navigation"
+
         >
-          <span className="navbar-toggler-icon" />
-        </span>
+          <span
+            className="navbar-toggler-icon"
+            aria-label="Toggle navigation"
+          />
+
+        </button>
       )}
 
       {menuVisible && (
         <div className="popup-menu">
-          <span className="close-button" onClick={toggleMenu}>
+          <button
+            type="button"
+            aria-label="Toggle navigation"
+            className="close-button"
+            onClick={toggleMenu}
+          >
             <FaTimes />
 
-          </span>
+          </button>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="nav-list-popup">
             <li className="nav-item">
               <a href="#portfolio" className="nav-link" onClick={toggleMenu}>Portfolio</a>
