@@ -27,7 +27,7 @@ const About = () => (
     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center text-center" id="abt-cards">
 
       <div className="card bg-custom-color custom-row">
-        <img className="mb-4" src={frontIcon} />
+        <img className="mb-4" src={frontIcon} alt="front icon" />
         <h3 className="text-center font-weight-bold fs-4 mb-4 text-dark">Front-End</h3>
 
         <ul className="d-flex flex-wrap list-unstyled text-center justify-content-center" id="lan-list">
@@ -41,7 +41,7 @@ const About = () => (
         </ul>
       </div>
       <div className="card bg-custom-color custom-row ml-3  mr-3">
-        <img className="mb-4" src={backIcon} />
+        <img className="mb-4" src={backIcon} alt="back icon" />
         <h3 className="text-center font-weight-bold fs-4 mb-4 text-dark">Back-End and Testing</h3>
         <ul className="d-flex flex-wrap list-unstyled text-center justify-content-center" id="lan-list">
           <li id="language">Ruby on Rails</li>
@@ -54,7 +54,7 @@ const About = () => (
         </ul>
       </div>
       <div className="card bg-custom-color custom-row">
-        <img className="mb-4" src={skills} />
+        <img className="mb-4" src={skills} alt="skills" />
         <h3 className="text-center font-weight-bold fs-4 mb-4 text-dark">Other Professional Skills</h3>
         <ul className="d-flex flex-wrap list-unstyled text-center justify-content-center" id="lan-list">
           <li id="language">Git, Github</li>
