@@ -150,7 +150,6 @@ function App() {
                 frameworks={card.frameworks.map((framework) => capitalize(framework))}
                 description={card.description || 'No description available'}
                 image={card.image}
-
                 style={{ width: '300px', height: '300px' }}
                 link={card.html_url}
                 // liveDemoLink= {card.liveDemoLink}

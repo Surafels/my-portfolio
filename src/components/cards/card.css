@@ -9,6 +9,9 @@
     text-align: center;
 
 }
+.card-img-top {
+  height:400px;
+}
 
 #recent {
   text-align: center;

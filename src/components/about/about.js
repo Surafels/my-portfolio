@@ -21,7 +21,7 @@ const About = () => (
         of my work and experience! If you like what you see and have a project
         you need coded, don't hesitate to contact me.
       </p>
-      <a href="https://drive.google.com/file/d/1xYRj6GnTZCVx3UmS8SyuAqM4DOjPQqub/view?usp=sharing" id="btn" target="_blank" rel="noreferrer">Get my resume</a>
+      <a href="https://drive.google.com/file/d/1NnQIQclYuVIjJXdFqp86p337lftEFqEQ/view?usp=sharing" id="btn" target="_blank" rel="noreferrer">Get my resume</a>
 
     </div>
     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center text-center" id="abt-cards">
