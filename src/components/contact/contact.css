@@ -1,10 +1,8 @@
 #contact-detail {
-    
     translate: none;
     rotate: none;
     scale: none;
     transform: translate(0px, 0px);
-
     font-style: normal;
     font-weight: 500;
     font-size: 27px;
@@ -14,7 +12,10 @@
     margin-block: 36px;
     position: relative;
     margin-inline: auto;
-
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
 }
 
 
@@ -77,9 +78,10 @@ textarea {
         margin: 120px 24px 0;
         gap: 24px;
      } 
-     #btn {
-        align-self: flex-start;
-      }
+    
+      .get-in-touch-button{
+        align-self: auto;
+        }
       #email {
         display: none;
       }
@@ -103,6 +105,18 @@ textarea {
           transform: translateX(0);
         }
       }
+      #contact-form {
+        padding-bottom: 160px;
+      }
   }
 
+  .background-svg {
+    background-image: url('../../assets/images/footer-image.svg');
+    background-size: 100% 133%;
+    background-repeat: no-repeat;
+  }
+
+ 
+
+ 
   
