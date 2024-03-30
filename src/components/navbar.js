@@ -1,74 +1,5 @@
-// import React, { useState, useEffect } from 'react';
-// import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import './style.css'; // Import the CSS file
-
-// const Navbar = () => {
-//   const [menuVisible, setMenuVisible] = useState(false);
-//   const [showHamburger, setShowHamburger] = useState(true);
-
-//   const toggleMenu = () => {
-//     setMenuVisible((prevMenuVisible) => !prevMenuVisible);
-//   };
-
-//   const handleMenuClick = () => {
-//     setMenuVisible(false);
-//   };
-
-//   useEffect(() => {
-//     const handleResize = () => {
-//       setShowHamburger(window.innerWidth < 768);
-//       setMenuVisible(false); // Close the menu on resize
-//     };
-
-//     window.addEventListener('resize', handleResize);
-//     handleResize(); // Check initial screen size on component mount
-
-//     return () => {
-//       window.removeEventListener('resize', handleResize);
-//     };
-//   }, []);
-
-//   return (
-//     <div id="nav-bar">
-//       {showHamburger ? (
-//         <div id="hamburger-icon" onClick={toggleMenu}>
-//           {menuVisible ? (
-//             <FontAwesomeIcon icon={faTimes} />
-//           ) : (
-//             <FontAwesomeIcon icon={faBars} />
-//           )}
-//         </div>
-//       ) : null}
-//       {(showHamburger || menuVisible) && (
-//         <ul id="menu-list" onClick={handleMenuClick}>
-//           <li className="nav-item">
-//             <a className="nav-link" href="#">
-//               Portfolio
-//             </a>
-//           </li>
-//           <li className="nav-item">
-//             <a className="nav-link" href="#">
-//               About
-//             </a>
-//           </li>
-//           <li className="nav-item">
-//             <a className="nav-link" href="#">
-//               Contact
-//             </a>
-//           </li>
-//         </ul>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
-
 import { FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -82,11 +13,11 @@ const Navbar = () => {
   useEffect(() => {
     const handleResize = () => {
       setShowList(window.innerWidth >= 768);
-      setMenuVisible(false); // Close the menu on resize
+      setMenuVisible(false);
     };
 
     window.addEventListener('resize', handleResize);
-    handleResize(); // Check initial screen size on component mount
+    handleResize();
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -99,25 +30,18 @@ const Navbar = () => {
       {showList ? (
         <ul className="" id="nav-list">
           <li className="nav-item">
-            <a className="nav-link" href="#">Portfolio</a>
-            {/* <Link to="/portfolio" className="nav-link">Portfolio</Link> */}
-
+            <a href="#portfolio" className="nav-link">Portfolio</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">About</a>
-            {/* <Link to="/about" className="nav-link">About</Link> */}
-
+            <a href="#about" className="nav-link">About</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Contact</a>
-            {/* <Link to="/contact" className="nav-link">Contact</Link> */}
-
+            <a href="#contact" className="nav-link">Contact</a>
           </li>
         </ul>
       ) : (
         <span
           className="navbar-toggler mr-2"
-            // type="button"
           onClick={toggleMenu}
         >
           <span className="navbar-toggler-icon" />
@@ -126,22 +50,19 @@ const Navbar = () => {
 
       {menuVisible && (
         <div className="popup-menu">
-          <button className="close-button" onClick={toggleMenu}>
+          <span className="close-button" onClick={toggleMenu}>
             <FaTimes />
-          </button>
+
+          </span>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="nav-list-popup">
             <li className="nav-item">
-              <a className="nav-link" href="#">Portfolio</a>
+              <a href="#portfolio" className="nav-link" onClick={toggleMenu}>Portfolio</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">About</a>
-              {/* <Link to="/about" className="nav-link">About</Link> */}
-
+              <a href="#about" className="nav-link" onClick={toggleMenu}>About</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contact</a>
-              {/* <Link to="/contact" className="nav-link">Contact</Link> */}
-
+              <a href="#contact" className="nav-link" onClick={toggleMenu}>Contact</a>
             </li>
           </ul>
         </div>
