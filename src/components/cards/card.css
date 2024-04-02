@@ -1,16 +1,15 @@
 #card-info {
-  
-    height: auto;
-    padding-bottom: 20px;
-    width: 100%;
-    border-radius: 8px;
-    background: #fff;
-    align-items: center;
-    text-align: center;
-
+  height: auto;
+  padding-bottom: 20px;
+  width: 100%;
+  border-radius: 8px;
+  background: #fff;
+  align-items: center;
+  text-align: center;
 }
+
 .card-img-top {
-  height:400px;
+  height: 400px;
 }
 
 #recent {
@@ -22,8 +21,9 @@
   font-size: 40px;
   line-height: 52px;
   font-weight: bold;
-  margin:120px 0 24px 0;
+  margin: 120px 0 24px 0;
 }
+
 .card-title {
   margin: 16px;
   font-style: normal;
@@ -34,12 +34,11 @@
 
 #stacks {
   display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 #stacks li {
-    
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -52,8 +51,7 @@
   margin-left: 4px;
   margin-right: 4px;
   margin-top: 10px;
-} 
-
+}
 
 #images-container {
   width: 100%;
@@ -66,118 +64,122 @@
   object-fit: cover;
   margin-bottom: 12px;
 }
+
 #btn {
   border: none;
   cursor: pointer;
 }
+
 .btn-close {
   padding: 10px;
   margin-bottom: 12px;
   display: flex;
   align-self: flex-end;
   border: 2px solid #ebecf0;
-  ;
 }
+
 #close-image {
   display: flex;
   flex-direction: column;
 }
-  .popup-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    
-  }
-  
-  .scrolling-line-container {
-    overflow-y: scroll;
-  }
-  
-  .scrolling-line-container::-webkit-scrollbar {
-    width: 10px; 
-    background-color: transparent;
-  }
-  
-  .scrolling-line-container::-webkit-scrollbar-track {
-    background-color: transparent; 
-  }
-  
-  .scrolling-line-container::-webkit-scrollbar-thumb {
-    background-color: #008552; 
-    border-radius: 5px; 
-  }
-  
- 
+
+.popup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.scrolling-line-container {
+  overflow-y: scroll;
+}
+
+.scrolling-line-container::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+.scrolling-line-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.scrolling-line-container::-webkit-scrollbar-thumb {
+  background-color: #008552;
+  border-radius: 5px;
+}
+
 .container {
   min-width: 310px;
   max-width: 336px;
 }
-  #card-body {
-    border-radius: 8px;
-    border: 1px solid #d0d9d4;
-    background-size: 100% 50%;
-    min-width: 310px;
-    max-width: 336px;
-    margin: 1rem;
-    margin-top: 24px;
+
+#card-body {
+  border-radius: 8px;
+  border: 1px solid #d0d9d4;
+  background-size: 100% 50%;
+  min-width: 310px;
+  max-width: 336px;
+  margin: 1rem;
+  margin-top: 24px;
 }
+
 #popup-window {
   transition: transform 0.3s ease;
   max-height: 90vh;
   border: none;
-  padding:16px;
+  padding: 16px;
 }
-#popup-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
-    background-color: #fff;
-    z-index: 999;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    z-index: 999;
 
-  }
-  #popup-title {
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 10px;
-    color: rgb(90 98 95);
-    font-size: 40px;
-    line-height: 80px;
-  }
-  #popup-tech {
-    list-style-type: none;
-    margin-bottom: 24px;
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    padding:0;
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  background-color: #fff;
+  z-index: 999;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
 }
-  #popup-tech li {
-    text-align: center;
-    background: #ebf0ee;
-    border-radius: 4px;
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-top: 13px;
-    width: auto;
-    height: auto;
-    padding: 8px 12px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
+
+#popup-title {
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 10px;
+  color: rgb(90 98 95);
+  font-size: 40px;
+  line-height: 80px;
+}
+
+#popup-tech {
+  list-style-type: none;
+  margin-bottom: 24px;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+#popup-tech li {
+  text-align: center;
+  background: #ebf0ee;
+  border-radius: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 13px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
 }
 
 #repo-description {
@@ -190,6 +192,7 @@
   font-size: 17px;
   line-height: 31px;
 }
+
 #popup-description {
   width: auto;
   font-family: "Inter", sans-serif;
@@ -201,21 +204,23 @@
   font-size: 17px;
   line-height: 31px;
 }
+
 #popup-btn {
   display: flex;
-    background: #36b37f;
-    border-radius: 4px;
-    width: auto;
-    height: auto;
-    padding: 12px;
-    border: none;
-
+  background: #36b37f;
+  border-radius: 4px;
+  width: auto;
+  height: auto;
+  padding: 12px;
+  border: none;
 }
+
 #popup-btns {
   justify-content: flex-start;
-  gap:12px;
+  gap: 12px;
   padding-bottom: 40px;
 }
+
 #live-link {
   text-decoration: none;
   margin-right: 16px;
@@ -227,15 +232,14 @@
   color: #fff;
 }
 
-
-
 @media (min-width: 768px) {
   .container {
     min-width: 340px;
     max-width: 400px;
   }
+
   #popup-container {
-   align-items: flex-start;
+    align-items: flex-start;
     opacity: 1;
     transform: translate(-50%, -50%);
     width: 40vw;
@@ -248,36 +252,42 @@
     position: fixed;
     top: 50%;
     left: 50%;
-}
-#popuo-tech {
-  margin:0;
-  padding:0;
-  display:flex;
-}
-#card-body {
-  border-radius: none;
-  border: none;
-  max-width:100%;
-}
-.popup-image {
-  width: 100%;
-}
+  }
 
+  #popuo-tech {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
 
-.scrolling-line-container {
-  overflow-y: scroll;
-}
+  #card-body {
+    border-radius: 0;
+    border: none;
+    max-width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
 
-.scrolling-line-container::-webkit-scrollbar {
-  width: 10px; 
-}
+  .popup-image {
+    width: 100%;
+  }
 
-.scrolling-line-container::-webkit-scrollbar-track {
-  background-color: #f1f1f1; 
-}
+  .scrolling-line-container {
+    overflow-y: scroll;
+  }
 
-.scrolling-line-container::-webkit-scrollbar-thumb {
-  background-color: hwb(142 22% 33%); 
-  border-radius: 5px; 
-}
+  .scrolling-line-container::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .scrolling-line-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  .scrolling-line-container::-webkit-scrollbar-thumb {
+    background-color: rgb(56, 171, 98);
+    border-radius: 5px;
+  }
 }
