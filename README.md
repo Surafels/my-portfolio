@@ -16,7 +16,7 @@
   - [Setup](#setup)
   - [Install](#install)
   - [Usage](#usage)
-  - [🚀 Live Demo](#live-demo)
+  - [Live Demo](#live-demo)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -88,7 +88,7 @@ To run the project run :
 
     npm start
 
-### Live Demo
+### 🚀 Live Demo
 
  [Live demo link]()
 
