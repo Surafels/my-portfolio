@@ -57,14 +57,14 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to set up and run the application you need:
+To set up and run the application you need:
 
 - A code editor preferably Visual Studio Code
-- A web browser preferably Google chrome.
+- A web browser preferably Google Chrome.
 
 Basic requirements are needed in order to fully understand how the project fully works :
 
-- Basic knowledge of HTML, CSS, React, Bootstrap, and webpack.
+- Basic knowledge of HTML, CSS, React, Bootstrap, and Webpack.
 - How to work with Git and GitHub.
 - Basic knowledge of APIs.
 
@@ -90,7 +90,7 @@ To run the project run :
 
 ### Live Demo
 
- [Live demo link]()
+ [Live demo link](https://my-portfolio-hzc6.onrender.com/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
