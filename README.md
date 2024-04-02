@@ -7,7 +7,7 @@
 
 # 📗 Table of Contents
 
-- [📖 My Portfolio](#My Portfolio)
+- [📖 My Portfolio](#My-Portfolio)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -128,7 +128,7 @@ If you like this project please put a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I want to thank my partners.
+I want to thank [Microverse](https://www.microverse.org/).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
