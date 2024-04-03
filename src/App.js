@@ -13,7 +13,7 @@ function App() {
     try {
       const response = await fetch(`https://api.github.com/repos/${repo.owner.login}/${repo.name}`, {
         headers: {
-          Authorization: 'Bearer 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',
+          Authorization: 'Bearer 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',
         },
       });
 
@@ -68,7 +68,7 @@ function App() {
       try {
         const response = await fetch('https://api.github.com/users/Surafels/repos', {
           headers: {
-            Authorization: 'Bearer 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',
+            Authorization: 'Bearer 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',
           },
         });
 
