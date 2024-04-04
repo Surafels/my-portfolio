@@ -5,8 +5,15 @@ import './card.css';
 import { GithubIcon, SeeliveIcon } from '../contact/icons';
 
 const Cards = ({
-  image, title, languages, frameworks, link, description,
+  image, title, languages, frameworks, link, description, live,
 }) => {
+  useEffect(() => {
+    console.log('Image URL:', image);
+    console.log('frameworks used ', frameworks);
+    console.log('languages:', languages);
+    console.log('demo link:', live);
+  }, [frameworks, languages, image, live]);
+
   const [showPopup, setShowPopup] = useState(false);
 
   const openPopup = () => {
@@ -43,12 +50,15 @@ const Cards = ({
               <div>
                 <h5 className="card-title">{title}</h5>
                 <ul id="stacks" className="list-unstyled mb-3">
-                  {languages && languages.map((language) => (
+                  {/* {languages && languages.map((language) => (
                     <li key={language} id="list-stack">{language}</li>
                   ))}
                   {frameworks && frameworks.map((framework) => (
                     <li key={framework} id="list-stack">{framework}</li>
-                  ))}
+                  ))} */}
+                  <li key={languages} id="list-stack">{languages}</li>
+                  <li key={frameworks} id="list-stack">{frameworks}</li>
+
                 </ul>
                 <button onClick={openPopup} type="button" id="btn">See Project</button>
               </div>
@@ -80,7 +90,9 @@ const Cards = ({
             <div className="d-flex" id="popup-btns">
               <div className="d-flex">
                 <button type="button" className="card-link" id="popup-btn">
-                  <a id="live-link" href={link}>See Live</a>
+                  {/* <a id="live-link" href={live}>See Live</a> */}
+
+                  <a id="live-link" href={live} target="_blank" rel="noopener noreferrer">See Live</a>
                   <SeeliveIcon />
                 </button>
               </div>
@@ -100,14 +112,13 @@ const Cards = ({
 };
 
 Cards.propTypes = {
-  image: PropTypes.arrayOf(PropTypes.string).isRequired,
+  image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   languages: PropTypes.arrayOf(PropTypes.string).isRequired,
   description: PropTypes.string.isRequired,
   frameworks: PropTypes.arrayOf(PropTypes.string).isRequired,
   link: PropTypes.string.isRequired,
-  // liveDemoLink: PropTypes.string.isRequired,
-
+  live: PropTypes.string.isRequired,
 };
 
 export default Cards;
