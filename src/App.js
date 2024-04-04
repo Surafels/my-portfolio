@@ -12,9 +12,6 @@ function App() {
   const fetchLanguagesAndFrameworksFromDescription = async (repo) => {
     try {
       const response = await fetch(`https://api.github.com/repos/${repo.owner.login}/${repo.name}`, {
-        headers: {
-          Authorization: 'Bearer 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',
-        },
       });
 
       if (!response.ok) {
@@ -67,9 +64,6 @@ function App() {
     const fetchCardData = async () => {
       try {
         const response = await fetch('https://api.github.com/users/Surafels/repos', {
-          headers: {
-            Authorization: 'Bearer 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',
-          },
         });
 
         if (!response.ok) {
