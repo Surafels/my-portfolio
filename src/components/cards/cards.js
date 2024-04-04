@@ -50,14 +50,12 @@ const Cards = ({
               <div>
                 <h5 className="card-title">{title}</h5>
                 <ul id="stacks" className="list-unstyled mb-3">
-                  {/* {languages && languages.map((language) => (
+                  {languages && languages.map((language) => (
                     <li key={language} id="list-stack">{language}</li>
                   ))}
                   {frameworks && frameworks.map((framework) => (
                     <li key={framework} id="list-stack">{framework}</li>
-                  ))} */}
-                  <li key={languages} id="list-stack">{languages}</li>
-                  <li key={frameworks} id="list-stack">{frameworks}</li>
+                  ))}
 
                 </ul>
                 <button onClick={openPopup} type="button" id="btn">See Project</button>
