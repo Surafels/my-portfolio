@@ -90,7 +90,7 @@ To run the project run :
 
 ### 🚀 Live Demo
 
- [Live demo link](https://my-portfolio-hzc6.onrender.com/)
+ [Live demo link](https://surafels-portfolio.onrender.com/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
