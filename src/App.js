@@ -45,6 +45,15 @@ function App() {
     }
   };
 
+  const extractLiveDemoUrlFromReadme = (readmeContent) => {
+    const liveDemoRegex = /Live Demo: \[([^\]]+)]\(([^)]+)\)/g; // Regex to match live demo link
+    const match = liveDemoRegex.exec(readmeContent);
+    if (match && match[2]) {
+      return match[2];
+    }
+    return ''; // Return empty string if no live demo link found
+  };
+
   const extractImageFromReadme = (readmeContent) => {
     try {
       const imageRegex = /<img[^>]+src="([^">]+)"/g;
@@ -103,12 +112,14 @@ function App() {
               // const languages = extractLanguagesFromReadme(atob(readmeData.content));
               // const frameworks = extractFrameworksFromReadme(atob(readmeData.content));
               const image = extractImageFromReadme(atob(readmeData.content));
+              const live = extractLiveDemoUrlFromReadme(atob(readmeData.content));
 
               return {
                 ...repo,
                 languages,
                 frameworks,
                 image,
+                live,
               };
             } catch (error) {
               console.error(`Error fetching README for repository: ${repo.name}`, error);
@@ -117,6 +128,7 @@ function App() {
                 languages: ['Error fetching languages'],
                 frameworks: ['Error fetching frameworks'],
                 image: 'error fetching image',
+                live: 'Error featching image',
               };
             }
           }),

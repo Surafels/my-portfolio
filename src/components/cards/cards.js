@@ -90,13 +90,13 @@ const Cards = ({
                 <button type="button" className="card-link" id="popup-btn">
                   {/* <a id="live-link" href={live}>See Live</a> */}
 
-                  <a id="live-link" href={live} target="_blank" rel="noopener noreferrer">See Live</a>
+                  <a id="live-link" href={live}>See Live</a>
                   <SeeliveIcon />
                 </button>
               </div>
               <div>
                 <button type="button" className="card-link" id="popup-btn">
-                  <a id="live-link" href={link}>See Source</a>
+                  <a id="live-link" href={link} target="_blank" rel="noopener noreferrer">See Source</a>
                   <GithubIcon />
                 </button>
               </div>

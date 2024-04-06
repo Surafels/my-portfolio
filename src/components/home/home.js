@@ -8,7 +8,7 @@ const Home = () => (
   <div id="desktop-home">
     <Navbar />
     <div id="home-page" className="container-fluid">
-      <div className="row justify-content-center align-items-center mb-3">
+      <div className="row justify-content-center align-items-center mb-3 mr-0">
         <div className="text-center">
 
           <h1 id="title">
@@ -26,7 +26,7 @@ const Home = () => (
           </p>
         </div>
         <SocialIcons />
-        <a href="#portfolio">
+        <a href="#contact">
           {' '}
           <svg id="down-arrow" width="327" height="48" viewBox="0 0 327 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="144" y="4" width="40" height="40" rx="20" fill="white" />
