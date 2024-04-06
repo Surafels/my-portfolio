@@ -12,9 +12,6 @@ function App() {
   const fetchLanguagesAndFrameworksFromDescription = async (repo) => {
     try {
       const response = await fetch(`https://api.github.com/repos/${repo.owner.login}/${repo.name}`, {
-        headers: {
-          Authorization: 'Bearer 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',
-        },
       });
 
       if (!response.ok) {
